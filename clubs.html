@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+
+
+    <style>
+        #carouselExampleControls{
+            height:300px;
+             width:100%;
+        }
+        
+        #carouselExampleControls  .carousel-item img {
+            height:300px;
+            width:100%;
+        } 
+        
+        .name{
+            font-size: 5rem;
+            position: absolute;
+            top: 100px;
+            right: 45%;
+        }
+        
+        .name:hover{
+            font-size:7rem;
+            color: #3F2E3E;
+        }
+        .head{
+            font-size: 2rem;
+            padding: 5px;
+        }
+        
+        .pill {
+            height:0px;
+            border-radius: 2px;
+            color: teal;
+            border : 2px solid currentColor;
+            width : 80%;
+          }
+        
+        .description{
+            background-color: #e0e8f2 ;
+        }
+        
+        .importance{
+            font-size: 1.25rem;
+            text-align: justify;
+            padding: 5%;
+            padding-top: 0%;
+            line-height: 2rem;
+            word-spacing: 0.5rem;
+            margin: 0%;
+        }
+        
+        .importance{
+            animation: display 3s  1;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes display {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        
+        .content{
+            background-color: #e0e8f2;
+            padding: 2%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .clublogo{
+            text-align: center;
+            background-color: #F7F8FB;
+            border-radius: 5%;
+            padding: 10px;
+            
+        }
+        
+        .logoname{
+            font-size:23px;
+        }
+        
+        
+        .clublogo:hover{
+            background-color: #0c4da2;
+            transform: translateY(-10px);
+            cursor: pointer;
+        }
+        
+        .modal-body{
+            display: flex;
+            align-items: center;
+            padding: 5%;
+        }
+        
+        .modal-body img{
+            padding: 5px;
+        }
+        
+        .modal-content{
+            animation: modalopen 1s ;
+        }
+        
+        @keyframes modalopen {
+            from {
+              left: -50%;
+              opacity: 0;
+            }
+            to {
+              left: 0;
+              opacity: 1;
+            }
+        }
+        
+        .left{
+            animation: modalopenleft 1s;
+        }
+        
+        @keyframes modalopenleft {
+            from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 0;
+                opacity: 1;
+              }
+        }
+        
+        
+        @media screen and (max-width:1000px) {
+            .modal-body{
+                display: inline;
+                align-items: center;
+            }
+            .content{
+                gap: 50px;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            #content{
+                margin-top:40vh;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            #content{
+            display: none;}
+        .description{
+            margin-top: 40vh;
+        }
+    }
+    </style>
+
+</head>
+<body>
+
+    <script id="replace_with_navbar" src="nav.js"></script> 
+    
+    <div id="content" style="margin-top:17vh;">
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://img.freepik.com/free-vector/musical-pentagram-sound-waves-notes-background_1017-33911.jpg?w=2000" class="d-block w-100" alt="..." data-bs-interval="2000">
+              </div>
+              <div class="carousel-item">
+                <img src="https://t3.ftcdn.net/jpg/01/95/89/72/360_F_195897299_oBB6HjKQ8CJ38fCSXEiHMNxMjjAxdFGI.jpg" class="d-block w-100" alt="..." data-bs-interval="2000">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.wallpapersafari.com/83/66/rWOjCf.jpeg" class="d-block w-100" alt="..." data-bs-interval="2000">
+              </div>
+              <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr3FGGPoNEwb-HR7kwaJX2JpjyA1yQGkKOktnAOgpVtQCgaEXMk1F3vjIvZGy2Bvqb3yU&usqp=CAU" class="d-block w-100" alt="..." data-bs-interval="2000">
+              </div>
+              <div class="carousel-item">
+                <img src="https://t3.ftcdn.net/jpg/05/17/13/48/360_F_517134830_khmyeQ5beRJeAR4kIBgZKeygKAW151Dn.jpg" class="d-block w-100" alt="..." data-bs-interval="2000">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+        <center><p class="name">Clubs</p></center>
+        
+        </div>
+    
+        <div class="description">
+        <center><p class="head">Explore the fun Beyond Classrooms</p>
+    
+        <hr class="pill">
+    </center>
+    
+        <p class="importance">
+            Extracurricular activity clubs at school are essential for the overall development of students. 
+            These clubs broaden their horizons by exposing them to diverse subjects and interests. 
+            They provide a platform for skill development, whether it's physical, artistic, or social skills, while promoting teamwork and discipline. 
+            Additionally, these clubs help students build social connections and a sense of belonging within the school community. 
+            Participating in clubs also offers leadership opportunities, teaches time management, and promotes stress relief and balance in students' lives. 
+            Furthermore, extracurricular activities enhance college and career readiness, as they demonstrate a student's passion and dedication. 
+            Above all, these clubs foster personal growth, self-expression, and a strong sense of identity, preparing students for a successful future.
+            
+        </p>
+    
+        </div>
+    
+        <div class="content">
+            <div class="clublogo " id="Singing_Club" onclick="openModal1()"> 
+                <img class="logoimage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIcdsc0O98u1pVGB5Y14k4OL_RykxHGul2oSzd7n2qV1R6q8EO1RCwRdBitrrrj6qyAVw&usqp=CAU" alt="singing" height="200px" width="200px" style="border-radius: 50%;">
+                <p class="logoname">Music Club</p>
+            </div>
+            <div class="clublogo" id="Dancing_Club" onclick="openModal2()">
+                <img class="logoimage" src="https://m.media-amazon.com/images/I/817dHVOsNNL._AC_UF894,1000_QL80_.jpg" alt="singing" height="200px" width="200px" style="border-radius: 50%;">
+                <p class="logoname">Dancing Club</p>
+            </div>
+            <div class="clublogo" id="Yoga_Club" onclick="openModal3()">
+                <img class="logoimage" src="https://img.freepik.com/premium-vector/tree-life-yoga-logo-design-template_677726-227.jpg?w=2000" alt="singing" height="200px" width="200px" style="border-radius: 50%;">
+                <p class="logoname">Yoga Club</p>
+            </div>
+        <!-- </div>
+        <div class="content"> -->
+            <div class="clublogo" id="Film_Club" onclick="openModal4()">
+                <img class="logoimage" src="https://img.freepik.com/premium-vector/cinema-logo-with-popcorn_23-2147494040.jpg" alt="singing" height="200px" width="200px" style="border-radius: 50%;">
+                <p class="logoname">Film Making Club</p>
+            </div>
+            <div class="clublogo" id="Sports_Club" onclick="openModal5()">
+                <img class="logoimage" src="https://img.freepik.com/premium-vector/sports-vector-hand-drawn-lettering-motivational-quote-phrase-written-with-brush-ink_195968-545.jpg?w=360" alt="singing" height="200px" width="200px" style="border-radius: 50%;">
+                <p class="logoname">Sports Club</p>
+            </div>
+            <div class="clublogo" id="Selfdefence_Club" onclick="openModal6()">
+                <img class="logoimage" src="https://www.nwahomepage.com/wp-content/uploads/sites/90/2016/07/1280x960_60310C00-EKABR_1468612728242_9551431_ver1.0.jpg?w=1280" alt="singing" height="200px" width="200px" style="border-radius: 50%;">
+                <p class="logoname">Self defence Club</p>
+            </div>
+        </div>
+    
+       
+    
+        
+    
+        <!-- Singing Club -->
+    
+        <div  class="modal" id="myModal1" tabindex="-1" >
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Music Club</h4>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <img src="https://c4.wallpaperflare.com/wallpaper/79/853/143/singing-orange-wallpaper-preview.jpg" alt="Singing" height="200px" style="width: auto; border-radius: 5%;" >
+                <div>
+                <p>A Music club at an academy is a vibrant hub where students come together to celebrate their love for music. 
+                This club plays a crucial role in nurturing talent, building confidence, and fostering a sense of belonging among its members. 
+                Through vocal training, performances, and collaboration, students develop their singing skills, overcome stage fright, 
+                and forge lifelong friendships with like-minded individuals. The club provides a platform for students 
+                to express themselves artistically, showcase their talent, and cultivate a deep appreciation for the power of music. 
+                It is a place where melodies soar, harmonies blend, and dreams take flight, leaving an indelible mark on the hearts and souls of those who participate.
+                <br>
+                </p>
+                </div>   
+            </div>
+            
+            <!--Footer-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick="closeModal1()">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Dancing Club -->
+        <div  class="modal" id="myModal2" tabindex="-1" >
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content left">
+                <!--Header-->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Dancing Club</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2m8RF4Fp9LVPDyx7miMeseRnwO_T-MhvmA&usqp=CAU" alt="Singing" height="200px" style="width: auto; border-radius: 5%;" >
+                    <div>
+                    <p>The dancing club at our academy is a vibrant and spirited community that ignites the passion for dance among students. 
+                        It serves as a platform for them to explore various dance styles, hone their technical skills, and unleash their creative potential. 
+                        Through regular rehearsals, workshops, and performances, the club aims to develop the dancers' physical abilities, coordination,
+                        and stage presence. Additionally, the club fosters teamwork, discipline, and perseverance as members collaborate on choreography and
+                        support each other's growth. Whether it's ballet, hip-hop, contemporary, or any other style, the dancing club creates an inclusive and 
+                        inspiring environment where students can find joy, self-expression, and a deep appreciation for the transformative power of dance.
+                        <br>
+                    </p>
+                    </div> 
+                
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick="closeModal2()">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+    
+        <!-- Yoga Club -->
+    
+        <div  class="modal" id="myModal3" tabindex="-1" >
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Yoga Club</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body left">
+                    <img src="https://media.istockphoto.com/id/165678178/vector/yoga-positions-woman.jpg?s=612x612&w=0&k=20&c=YWv7cNp16fpOba4KL-VEW4C9XOnB54KMd3HxsW9KWGA=" alt="Singing" height="200px" style="width: auto; border-radius: 5%;" >
+                    <div>
+                    <p>The yoga club at our academy is a sanctuary of tranquility and self-discovery. It aims to introduce students to the transformative practice of yoga,
+                     offering them a myriad of physical, mental, and emotional benefits. Through regular yoga sessions, the club strives to enhance students' 
+                     flexibility, strength, and balance, while also promoting mindfulness and stress reduction. The club creates a supportive and non-competitive
+                      environment where students can explore various yoga styles, learn proper alignment, and cultivate a deep connection with their breath. 
+                      Beyond the physical practice, the yoga club encourages self-reflection, self-compassion, and self-care, fostering a sense of inner peace
+                       and well-being. It serves as a refuge from the demands of academic life, providing students with tools to navigate challenges, cultivate mindfulness, 
+                       and nurture a harmonious mind-body connection.
+                       <br>
+                   </p>
+                   </div> 
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick="closeModal3()">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+    
+        <!-- Film making club -->
+    
+        <div  class="modal" id="myModal4" tabindex="-1" >
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content left">
+                <!--Header-->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Film making Club</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="https://st3.depositphotos.com/18509294/32520/v/600/depositphotos_325201648-stock-illustration-inspiration-film-maker-working-staff.jpg" alt="Singing" height="200px" style="width: auto; border-radius: 5%;" >
+                    <div>
+                    <p>The film-making club at our academy is a vibrant community of aspiring filmmakers, storytellers, and visual artists. 
+                    It provides a space for students to explore the world of cinema, learn the craft of filmmaking, and unleash their creativity.
+                    Through hands-on workshops, collaborative projects, and access to filmmaking equipment, the club aims to develop students' 
+                    technical skills in camera operation, editing, sound design, and screenwriting. 
+                    It encourages experimentation, pushing boundaries, and embracing diverse perspectives, allowing students to express their 
+                    unique voices and narratives through the medium of film. The club also fosters a deep appreciation for the power of storytelling
+                    and visual storytelling techniques, inspiring students to create compelling films that engage, entertain, and provoke thought.
+                    Ultimately, the film-making club nurtures a community of passionate storytellers who strive to make a meaningful impact through the magic of cinema.
+                    <br>
+                    </p>
+                    </div> 
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick="closeModal4()">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+    
+        <!--Sports Club  -->
+    
+        <div  class="modal" id="myModal5" tabindex="-1" >
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content ">
+                <!--Header-->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Sports Club</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="https://gws-the-clubhouse.s3.amazonaws.com/post/858/share-sports-property-vs-agency-SportsBusinessSolutions.jpeg?v=1659805204" alt="Singing" height="200px" style="width: auto; border-radius: 5%;" >
+                    <div>
+                    <p>The sports club at our academy serves as a dynamic and energetic platform for students to engage in a wide range of sports activities.
+                        It aims to foster a love for physical activity, encourage healthy competition, and develop essential life skills.
+                        Through regular training sessions, friendly matches, and competitive tournaments, the club strives to enhance students' athletic abilities, 
+                        improve their motor skills, and promote overall physical well-being. Moreover, the sports club instills values such as discipline, perseverance,
+                        and teamwork, as students learn to work collaboratively towards common goals. It provides an opportunity for students to discover their strengths,
+                        build self-confidence, and embrace the values of fair play and sportsmanship. The sports club not only celebrates achievements on the field but also
+                        nurtures lifelong habits of staying active and leading a balanced lifestyle.
+                        <br>
+                    </p>
+                    </div> 
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick="closeModal5()">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+    
+        <!--Self Defence  -->
+    
+        <div  class="modal" id="myModal6" tabindex="-1" >
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content left">
+                <!--Header-->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Self defence Club</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_L1qi1uj8UdnmBLhdKbfTu9yQqYXjjQmPh76eEgZ5SgdpIliZi1M_sjrX4_vpYxDKjCU&usqp=CAU" alt="Singing" height="200px" style="width: auto; border-radius: 5%;" >
+                    <div>
+                    <p>A self-defense club is a community or organization dedicated to teaching individuals practical techniques and strategies to protect themselves from potential threats or dangerous situations. 
+                        The primary goal of such clubs is to empower individuals with the knowledge and skills to enhance their personal safety and confidence.                                 
+                      Self-defense clubs typically offer regular training sessions, workshops, or classes. These sessions are led by experienced instructors who teach various techniques such as striking, blocking, grappling, escaping holds, 
+                      and using everyday objects for defense.
+                        <br>
+                    </p>
+                    </div> 
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick="closeModal6()">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+    
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>      
+        <script>
+    
+            // <!-- Singing Club -->
+    
+            function openModal1() {
+                document.getElementById("myModal1").style.display = "block";
+            }
+    
+            function closeModal1() {
+                    document.getElementById("myModal1").style.display = "none";
+            }
+    
+            // <!-- Dancing Club -->
+    
+            function openModal2() {
+                document.getElementById("myModal2").style.display = "block";
+            }
+    
+            function closeModal2() {
+                    document.getElementById("myModal2").style.display = "none";
+            }
+    
+            // <!-- Yoga Club -->
+    
+            function openModal3() {
+                document.getElementById("myModal3").style.display = "block";
+            }
+    
+            function closeModal3() {
+                    document.getElementById("myModal3").style.display = "none";
+            }
+    
+            // <!-- Film making club -->
+    
+            function openModal4() {
+                document.getElementById("myModal4").style.display = "block";
+            }
+    
+            function closeModal4() {
+                    document.getElementById("myModal4").style.display = "none";
+            }
+    
+            // <!--Sports Club  -->
+            
+            function openModal5() {
+                document.getElementById("myModal5").style.display = "block";
+            }
+    
+            function closeModal5() {
+                    document.getElementById("myModal5").style.display = "none";
+            }
+    
+            // <!--Self defence -->
+            
+            function openModal6() {
+                document.getElementById("myModal6").style.display = "block";
+            }
+    
+            function closeModal6() {
+                    document.getElementById("myModal6").style.display = "none";
+            }
+        </script>
+
+        <script src="search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+body{
+    background-image: url('https://images.collegedunia.com/public/college_data/images/campusimage/1407152952cmpus_home_three.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+p{
+    line-height: 1.5rem;
+    word-spacing: 0.25rem;
+    font-size: 2.5vh;
+}
+  
+  #myImg:hover,
+  #myImg1:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+ 
+
+.founder{
+    background-color:#fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.founder p{
+    text-align: justify;
+    width: 100vh;
+}
+
+
+.founder_description{
+    animation : moveleft 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes moveleft{
+    0% {
+        transform: translatex(100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translatex(0px);
+        visibility: visible;
+    }
+}
+
+
+.principal{
+    background-color:#fefefe;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+.principal_description{
+    animation: moveright 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveright{
+    0% {
+        transform: translatex(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translatex(0px);
+        visibility: visible;
+    }
+}
+
+
+.principal div p{
+    text-align: justify;
+    width: 80vh;
+}
+
+@media only screen and (max-width: 720px){
+    .founder div p,
+    .principal div p{
+        width: 100%;
+    }
+}
+
+.direct{
+    background-color:#e0e8f2;
+    margin: 0%;
+
+}
+
+.directors{
+    background-color:#e0e8f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.card-img-top{
+   border-radius: 50%;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+.slogans{
+    background-color:#03295a;
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    height: 30vh;
+}
+
+.motto{
+    width: 50%;
+    border-right: 1px solid black;
+    padding: 10px;
+}
+
+.motto{
+    animation : moveright 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    color: #fefefe;
+}
+
+
+.vision{
+    animation : moveleft 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards; 
+    color: #fefefe;
+}
+
+
+
+.vision{
+    width: 50%;
+    border-left: 1px solid black;
+    padding: 10px;
+    
+}
+
+/* .motto:hover , .vision:hover{
+    background-color: #ffaba1;
+    cursor: pointer;
+    transform: scale(1.5);
+    border-radius: 5%;
+} */
+
+.quote{
+    height: 30vh;
+}
+
+.quote p{
+    position: absolute;
+    right: 10px;
+    font-size: 2rem;
+    width: 20rem;
+    line-height: 3rem;
+    color: #fefefe;
+}
+
+

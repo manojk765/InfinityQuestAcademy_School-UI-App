@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+    
+
+
+
+    <style>
+
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+            *,*::after,*::before{
+                margin: 0;
+                padding: 0;
+                box-sizing: inherit;
+            } 
+            html{
+                height: 100%;
+                font-size: 65.2%;
+                box-sizing: border-box;
+                font-family: Montserrat, sans-serif;
+                font-weight: 400;
+            }
+
+            body{
+                height: 100%;
+                background: #fff;
+                color: #1d2129;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            h1{
+                    font-weight: 700;
+                    font-size: 3.5em;
+                    text-align: center;
+            }
+
+            p{
+                font-size: 1.7rem;
+            }
+            .version{
+                position:absolute;
+                bottom: 1em;
+                right: 2em;
+                border-radius: 40px;
+                background: #ff4b2b;
+                color: #fff;
+                font-size: 1em;
+                font-weight: bold;
+                padding: .8em 2em;
+                letter-spacing: 1px;
+                transition: transform 80ms ease-in;
+            }
+            form input {
+                background: #eee;
+                border: none;
+                padding: 12px 15px;
+                margin: 8px 0;
+                width: 100%;
+                            font-size: 1.4em;
+            }
+            span{
+                color: #333;
+                font-size: 1.4rem;
+                display: inline-block;
+                margin: 15px auto;
+                font-weight: 100;
+            }
+            span.remember{
+                float: left;
+                    &::before{
+                        content:"";
+                        display: inline-block;
+                        width: 1em;
+                        height: 1em;
+                        border: 2px solid #999;
+                        vertical-align: top;
+                        margin-right: 4px;
+                    }
+            }
+            span.forget{
+                float: right;
+            }
+            span.clearfix{
+            clear: both;
+            display: table;
+            }
+
+            span.loginwith{ 
+                display: block;
+                width: 100%;
+                margin-top: 1em;
+                white-space: nowrap;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                    &::before{
+                        content:"";
+                        display: inline-block;
+                        width: 42%; 
+                        height:1px;
+                        background: #aaa;
+                        vertical-align: middle;
+                        margin-right: 5%;
+                    }
+                    &::after{
+                        content:"";
+                        display: inline-block;
+                        width: 45%; 
+                        height: 1px;
+                        background: #aaa;
+                        vertical-align: middle;
+                        margin-left: 5%;
+                    }
+            }
+
+            span.copy{
+                display: block;
+                position: absolute;
+                bottom: 0;
+                font-size: 1em;
+            }
+
+            button {
+                display: block;
+                margin: 1em auto;
+                border-radius: 40px;
+                border: 1px solid #ff4b2b;
+                background: #ff4b2b;
+                color: #fff;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: .8em 2em;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: transform 80ms ease-in;
+            } 
+            button:hover {
+                cursor:pointer;
+            }
+            button:active {
+                transform: scale(.95);
+            }
+            button:focus {
+                outline: none;
+            }
+
+            #container{
+                width: 95%;
+                max-width: 800px;
+                height: 500px;
+                position: relative;
+                border-radius: 20px;
+                box-shadow: 0 14px 28px -10px rgba(0, 0, 0, .1), 0 10px 10px -10px rgba(0, 0, 0, .02);
+                transform-style: preserve-3d;
+                margin-top: 10%;
+                
+                &>div{
+                    position: absolute;
+                    width: 50%;
+                    min-width: 350px;
+                    height: 100%;
+                    top:0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+            }
+
+            .content{
+                    width: 100%;
+                    padding: 2em 4em;
+                    text-align: center;
+                    p{
+                        font-size: 1.4em;
+                       
+                    }
+            }
+
+            .page .content p{
+                margin-top:15px ;
+            }
+
+            .login{
+                    left:0;
+                    background:#FAFAFA;
+                    border-radius: 20px 0 0 20px;
+                    button{
+                        border-radius: 0px;
+                        width: 100%;
+                    }
+            }
+
+            .register{
+                    right: 0;
+                    z-index: 1;
+                    border-radius: 0 20px 20px 0;
+                    background:#FAFAFA;
+                    button{
+                        border-radius: 0px;
+                        width: 100%;
+                    }
+            }
+            .page{
+                    right:0; 
+                    color: #fff;
+                    border-radius:  0 20px 20px 0; 
+                    transform-origin: left center;
+                    transition: animation 1s linear;
+                    button{
+                        border-color: #fff;
+                        background: transparent;
+                    }
+                    p{
+                        margin: 2em auto;
+                    }
+            }
+
+            .front{
+                    background:linear-gradient(-45deg, #FFCF00 0%, #FC4F4F 100%) no-repeat 0 0 / 200%;
+                    z-index: 3;
+                
+            }
+
+            .back{
+                    background:linear-gradient(135deg, #FC4F4F 0%, #FFCF00 100%,) no-repeat 0 0 / 200%; 
+                    z-index: 2;
+                
+                    .content{
+                        transform: rotateY(180deg)
+                    }	
+            }
+
+            .active .front{
+                        animation: rot-front .6s ease-in-out normal forwards;
+            }
+            .active .back {
+                        animation: rot-back .6s ease-in-out normal forwards;
+            }
+
+            .close .front {
+                        animation: close-rot-front .6s ease-in-out normal forwards;
+            }
+            .close .back{ 
+                        animation: close-rot-back .6s ease-in-out normal forwards;
+            }
+            
+            @keyframes rot-front{ 
+                from{
+                    transform: translateZ(2px) rotateY(0deg); 
+                }
+                to{
+                    transform: translateZ(1px) rotateY(-180deg);
+                }
+            }
+
+            @keyframes close-rot-front{ 
+                from{
+                    transform: translateZ(1px) rotateY(-180deg); 
+                }
+                to{
+                    transform: translateZ(2px) rotateY(0deg);
+                }
+            }
+            @keyframes rot-back{ 
+                from{
+                        transform: translateZ(1px) rotateY(0deg); 
+                }
+                to{
+                    transform: translateZ(2px) rotateY(-180deg);
+                }
+            }
+            @keyframes close-rot-back{ 
+                from{
+                    transform: translateZ(2px) rotateY(-180deg); 
+                }
+                to{
+                    transform: translateZ(1px) rotateY(0deg);
+                }
+            }
+
+
+
+            .active .register .content{
+                    animation: show .7s ease-in-out normal forwards
+            }
+            .close .register .content{
+                    animation: hide .7s ease-in-out normal forwards
+            }
+            .active .login .content{
+                    animation: hide .7s ease-in-out normal forwards
+            }
+            .close .login .content{
+                    animation: show .7s ease-in-out normal forwards
+            }
+
+
+            @keyframes show{
+                from{
+                        opacity: 0;
+                        transform: scale(0.8)
+                }
+                to{
+                        opacity: .99;
+                        transform: scale(.99)
+                }
+            } 
+            @keyframes hide{
+                from{
+                        opacity: .99;
+                        transform: scale(0.99)
+                }
+                to{
+                        opacity: 0;
+                        transform: scale(0.8)
+                }
+            }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+		<div class="login">
+			<div class="content">
+					<h1>Log In</h1>
+				<form>
+					<input type="email" placeholder="email">
+					<input type="password" placeholder="password">
+					
+					<span class="forget">Forgot password?</span>
+					<span class="clearfix"></span>
+					<button><a href="index.html">Log In</a></button>
+				</form>
+				<span class="loginwith">Or Connect with</span>
+				<a href=""><i class="fa-brands fa-facebook"></i></a>
+				<a href=""><i class="fa-brands fa-github"></i></a>
+				<a href="#"><i class="fa-brands fa-google"></i></a>
+			</div>
+		</div>
+		<div class="page front" style="backdrop-filter: blur(10px); ">
+			<div class="content">
+				<h1>Hello, friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button type="" id="register">Register </button>
+			</div>
+		</div>
+		<div class="page back" style="backdrop-filter: blur(10px); background:transparent;">
+				<div class="content">
+					<h1>Welcome Back!</h1>
+					<p>To keep connected with us please login with your personal info</p> 
+					<button type="" id="login">Log In</button>
+			    </div>
+		</div>
+		<div class="register">
+			<div class="content">
+					<h1>Sign Up</h1>
+                    <a href="https://www.facebook.com/emin.qasimovdia"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.github.com/eminqasimov"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"></a>
+				
+					<span class="loginwith">Or</span>
+					<form>
+						<input type="text" placeholder="name">
+						<input type="email" placeholder="email">
+						<input type="password" placeholder="password"> 
+							<span class="">I accept terms</span> 
+							<span class="clearfix"></span>
+						<button href=".login">Register</button>
+				 </form>
+			</div>		
+		</div>
+</div>
+
+<script>
+    const registerButton = document.getElementById('register')
+    const loginButton = document.getElementById('login')
+    const container = document.getElementById('container')
+    
+
+    registerButton.onclick = function(){
+        container.className = 'active'
+    }
+    loginButton.onclick = function(){
+            container.className = 'close'
+    }
+
+</script>
+
+
+<script src="search.js"></script>
+
+</body>
+</html>

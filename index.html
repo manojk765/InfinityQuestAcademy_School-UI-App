@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Quest Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+ 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+    
+
+
+  <style>
+    /*body{
+      /*background-image: url('https://images.collegedunia.com/public/college_data/images/campusimage/1407152952cmpus_home_three.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      
+  }*/
+  
+  p{
+      line-height: 1.5rem;
+      word-spacing: 0.25rem;
+      font-size: 2.5vh;
+  }
+    
+    /*#myImg:hover,
+    #myImg1:hover {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+      transform: scale(1.1);
+    }*/
+
+    #myImg{
+      border-radius: 20px;
+      margin-left: -5%;
+
+    }
+    
+    #myImg1{
+      border-radius: 20px;
+      margin-right: -25%;
+    }
+   
+  
+  .founder{
+      background-color:#fefefe;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+      margin-top: 4%;
+  }
+
+  .founder h3{
+    margin-left: 8%;
+  }
+  
+  .founder p{
+      text-align: justify;
+      width: 100vh;
+      margin-left: 8%;
+  }
+
+  .founder-img{
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+  }
+  
+  .founder-img:hover{
+    transition: all .3s ease-out;
+    opacity: 1;
+    border-radius: 20px;
+    color: #fefefe;
+  }
+
+  .founder-img:hover h3 {
+    margin-top: 38%;
+    margin-left: 27%;
+  }
+
+  .founder-img:hover h2{
+    margin-left: 4%;
+  }
+  
+  .founder_description{
+      animation : moveleft 1s linear 1;
+      animation-delay: 1s;
+      visibility: hidden;
+      animation-fill-mode: forwards;
+  }
+    
+  @keyframes moveleft{
+      0% {
+          transform: translatex(100px);
+          visibility: visible;
+      }
+      100%{
+          transform: translatex(0px);
+          visibility: visible;
+      }
+  }
+  
+  
+  .principal{
+      background-color:#fefefe;
+      display: flex;
+      gap: 5%;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+  }
+  
+  
+  /*.principal_description{
+      animation: moveright 1s linear 1;
+      animation-delay: 3s;
+      visibility: hidden;
+      animation-fill-mode: forwards;
+  }*/
+
+  @keyframes moveright{
+      0% {
+          transform: translatex(-100px);
+          visibility: visible;
+      }
+      100%{
+          transform: translatex(0px);
+          visibility: visible;
+      }
+  }
+
+  .principle-img{
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    text-align: center;
+  }
+
+  .principle-img:hover{
+    transition: all .3s ease-out;
+    opacity: 1;
+    border-radius: 20px;
+    color: #fefefe;
+  }
+
+  .principle-img:hover h3{
+    margin-top: 38%;
+  }
+  
+  
+  .principal div p{
+      text-align: justify;
+      width: 80vh;
+      
+  }
+  
+  /*@media only screen and (max-width: 720px){
+      .founder div p,
+      .principal div p{
+          width: 100%;
+      }
+  }*/
+  
+  .direct{
+      background-color:#e0e8f2;
+      margin: 0%;
+      padding-left: 8%;
+      font-size:2.2rem;
+  
+  }
+  
+  .directors{
+      background-color:#e0e8f2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  
+  
+  .card:hover{
+      cursor: pointer;
+      transform: translateY(-10px);
+      transition: all .2s ease-in-out;
+  }
+  
+  .slogans{
+      
+      margin: 30px;
+      display:flex;
+      flex-wrap: wrap;
+      height: 30vh;
+  }
+  
+  .motto{
+      background-color:#2e364a;
+      width: 45%;
+      border-right: 1px solid black;
+      padding: 10px;
+      margin-left: 5%;
+  }
+  
+  .motto{
+      animation : moveright 1s linear 1;
+      animation-delay: 1s;
+      visibility: hidden;
+      animation-fill-mode: forwards;
+      color: #fefefe;
+  }
+  
+  
+  .vision{
+      animation : moveleft 1s linear 1;
+      animation-delay: 1s;
+      visibility: hidden;
+      animation-fill-mode: forwards; 
+      color: #fefefe;
+  }
+  
+  
+  
+  .vision{
+      background-color: #277191;
+      width: 45%;
+      
+      padding: 10px;
+      margin-right: 5%;
+      
+  }
+  
+  /* .motto:hover , .vision:hover{
+      background-color: #ffaba1;
+      cursor: pointer;
+      transform: scale(1.5);
+      border-radius: 5%;
+  } */
+  
+  .quote{
+      height: 30vh;
+  }
+  
+  .quote p{
+      position: absolute;
+      right: 10px;
+      font-size: 2rem;
+      width: 20rem;
+      line-height: 3rem;
+      color: #000;
+  }
+
+  @media screen and (min-width:300px) and (max-width:500px){
+    .founder div p{
+      width: 100%;
+
+    }
+    .founder{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .founder p {
+      width: 100%;
+      margin-left: -10px;
+    }
+
+    #myImg , #myImg1{
+      width: 75%;
+    }
+
+    .founder-img{
+      margin: -25% 0 0 -25%;
+    }
+
+    .slogans{
+      display: contents;
+    }
+
+    .motto , .vision{
+      width: 100%;
+      margin-left: -2px;
+    }
+
+    .motto{
+      width: 100%;
+    }
+    /*.principal{
+      display: contents;
+    }*/
+
+    .principal .principal_description p{
+      width: 100%;
+    }
+
+  
+  }
+
+  
+  @media screen and (min-width:501px) and (max-width:610px){
+    .founder div p{
+      width: 100%;
+
+    }
+    .founder{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .founder p {
+      width: 100%;
+      margin-left: -10px;
+    }
+
+    #myImg , #myImg1{
+      width: 75%;
+    }
+
+    .founder-img{
+      margin: -25% 0 0 -25%;
+    }
+
+    .slogans{
+      display: contents;
+    }
+
+    .motto , .vision{
+      width: 100%;
+      margin-left: -2px;
+    }
+
+    .motto{
+      width: 100%;
+    }
+    /*.principal{
+      display: contents;
+    }*/
+
+    .principal .principal_description p{
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (min-width:611px) and (max-width:730px){
+    .founder div p{
+      width: 100%;
+
+    }
+    .founder{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .founder p {
+      width: 100%;
+      margin-left: -10px;
+    }
+
+    #myImg , #myImg1{
+      width: 75%;
+    }
+
+    .founder-img{
+      margin: -25% 0 0 -25%;
+    }
+
+    .slogans{
+      display: contents;
+    }
+
+    .motto , .vision{
+      width: 100%;
+      margin-left: -2px;
+    }
+
+    .motto{
+      width: 100%;
+    }
+  }
+  @media screen and (min-width:731px) and (max-width:999px){
+    .founder div p{
+      width: 100%;
+
+    }
+    .founder{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .founder p {
+      width: 100%;
+      margin-left: -10px;
+    }
+
+    #myImg {
+      width: 50%;
+    }
+
+    #myImg1{
+      width: 60%;
+    }
+
+    .founder-img{
+      margin: -25% 0 0 -25%;
+    }
+
+    .slogans{
+      display: contents;
+    }
+
+    .motto , .vision{
+      width: 100%;
+      margin-left: -2px;
+    }
+
+    .motto{
+      width: 100%;
+    }
+  }
+  
+  </style>
+    
+
+</head>
+<body>
+  
+    <div class="top" id="top1">
+        <img class="logo" src="css/images/Screenshot_2023-07-14_182738-removebg-preview (1).png" alt="">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="dropdown-items">
+            <div class="dropdown"> 
+              <a class="btn " href="index.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="icon"><ion-icon name="home-sharp"></ion-icon></span>Home
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="index.html" >Home</a></li>
+            
+              </ul>
+              
+            </div>
+            <div class="dropdown">
+              <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="icon"><i class="fa-sharp fa-solid fa-graduation-cap"></i></span>Academics
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="Curriculum.html" >Curriculum</a></li>
+                <li><a class="dropdown-item" href="Teachers as Facilatators.html" >Faculty</a></li>
+                <li><a class="dropdown-item" href="Pedagogy.html" >pedagogy</a></li>
+                <!-- <li><a class="dropdown-item" href="Education Tour.html" target="_blank">Education Tour</a></li> -->
+              </ul>
+              
+            </div>
+            <div class="dropdown">
+              <a class="btn " href="clubs.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="icon"><i class="fa-solid fa-circle-nodes"></i></span>Clubs
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="clubs.html#SingingClub">Yoga Club</a></li>
+                <li><a class="dropdown-item" href="clubs.html#SingingClub">Singing Club</a></li>
+                <li><a class="dropdown-item" href="clubs.html#SingingClub">Dance Club</a></li>
+                <li><a class="dropdown-item" href="clubs.html#SingingClub">Cinema Club</a></li>
+                <li><a class="dropdown-item" href="clubs.html#SingingClub">Sports Club</a></li>
+              </ul>
+              
+            </div>
+            <div class="dropdown">
+              <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="icon"><i class="fa-sharp fa-solid fa-house-medical"></i></span>Facilities
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Sports</a></li>
+                <li><a class="dropdown-item" href="#">Music</a></li>
+                <li><a class="dropdown-item" href="#">Transport</a></li>
+                <li><a class="dropdown-item" href="#">Technology</a></li>
+                <li><a class="dropdown-item" href="#">Security</a></li>
+              </ul>
+           
+            </div>
+            <div class="dropdown">
+              <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="icon"><i class="fa-solid fa-network-wired"></i></span>Infrastructure
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="infrastructure.html#playground">Play Ground</a></li>
+                <li><a class="dropdown-item" href="infrastructure.html#classrooms">Class Rooms</a></li>
+                <li><a class="dropdown-item" href="infrastructure.html#library" >Library</a></li>
+                <li><a class="dropdown-item" href="infrastructure.html#computerlabs">Computer Labs</a></li>
+                <li><a class="dropdown-item" href="infrastructure.html#sciencelabs">Science Labs</a></li>
+                <li><a class="dropdown-item" href="infrastructure.html#extracurricularlabs">Extra Curricular Labs</a></li>
+              </ul>
+           
+            </div>
+          </div>
+        </nav>
+
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script> -->
+
+        <div class="search">
+          
+              <form class="d-flex" id="form">
+          
+                <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+          
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submit" data-bs-target="_blank"><i class="fas fa-search"></i></button>
+              </form>
+          
+            <!-- <ul class="list-group list-group-flush" id="ul">
+          
+            </ul> -->
+
+            <div id="error-message" class="mt-3 text-danger" style="display: none;">
+              Content not found.
+            </div>
+          
+          <ul>
+            <li class="login">
+              <div class="dropdown">
+                <a class="btn " href="login.html">
+                  Login/SignUp
+                </a>
+              </div>
+            </button></li>
+            <li class="admission">
+              <div class="dropdown">
+                <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Admission
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="./primary.html">Primary</a></li>
+                  <li><a class="dropdown-item" href="./mid-school.html">Mid -School</a></li>
+                  <li><a class="dropdown-item" href="./post-secondary-school.html">Post - Secondary School</a></li>
+                </ul>
+             
+              </div>
+            </button></li>
+            </li>
+            <li><a class="btn " href="#footer">
+              Contact us
+            </a></li>
+          </ul>
+        </div>
+    </div>
+    <section id="carousel">
+      <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            
+            <img src="css/images/pngegg.png" class="d-block1 " alt="..." >
+            <div class="carousel-caption d-none d-md-block">
+              <div class="about-slide1">
+              <h2>Welcome To Infinity Quest Academy</h2>
+              <p>where endless possibilities meet limitless learning. Explore our diverse range of programs, exceptional faculty, and state-of-the-art facilities to embark on a transformative educational journey.</p>
+            </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="css/images/pngegg (1).png" class="d-block2 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="about-slide1">
+              <h2>Welcome To Infinity Quest Academy</h2>
+              <p>Welcome to Infinity Quest Academy, where endless possibilities meet limitless learning. Explore our diverse range of programs, exceptional faculty, and state-of-the-art facilities to embark on a transformative educational journey.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="css/images/pngegg.png" class="d-block1 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="about-slide1">
+              <h2>Welcome To Infinity Quest Academy</h2>
+              <p>Welcome to Infinity Quest Academy, where endless possibilities meet limitless learning. Explore our diverse range of programs, exceptional faculty, and state-of-the-art facilities to embark on a transformative educational journey.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+    </section>
+
+    <section id="aboutus" class="about-us">
+      <h2 class="best">Why We Are Best...</h2>
+      <div class="timeline">
+
+        <div class="container left-container">
+          <i class="img fa-solid fa-circle-check "></i>
+          <div class="text-box">
+            <h2>Expert Instructors</h2>
+            <p>Our academy boasts a team of highly qualified and experienced instructors who are experts in their respective fields. They are dedicated to providing top-notch education and mentorship, ensuring that you receive the best learning experience possible.</p>
+            <span class="left-container-arrow"></span>
+          </div>
+        </div>
+
+        <div class="container right-container">
+          <i class="img fa-solid fa-circle-check "></i>
+          <div class="text-box">
+            <h2>Comprehensive Course Offerings</h2>
+            <p>At Infinity Quest Academy, we offer a wide range of courses tailored to meet diverse learning objectives. Whether you're a beginner or an advanced learner, we have the perfect course to suit your needs, ensuring a personalized and effective learning journey.</p>
+            <span class="right-container-arrow"></span>
+          </div>
+        </div>
+
+        <div class="container left-container">
+          <i class="img fa-solid fa-circle-check "></i>
+          <div class="text-box">
+            <h2>Cutting-edge Curriculum</h2>
+            <p>Our academy prides itself on staying at the forefront of industry developments and trends. We continuously update and enhance our curriculum to equip students with the latest knowledge and skills, giving them a competitive edge in their careers.</p>
+            <span class="left-container-arrow"></span>
+          </div>
+        </div>
+
+        <div class="container right-container">
+          <i class="img fa-solid fa-circle-check "></i>
+          <div class="text-box">
+            <h2>Supportive Learning Environment</h2>
+            <p>We foster a positive and supportive learning environment that encourages collaboration and networking among students. With small class sizes and personalized attention, our academy ensures that each learner receives the necessary support to excel in their studies.</p>
+            <span class="right-container-arrow"></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="admission1" id="admission2">
+        <h3>For Admissions and Enquiry</h3>
+      <div class="row">
+
+        <div class="card" style="width: 22rem;">
+          <img src="https://www.icskwt.com/images/middle%20school%20sub%20images.jpg" class="card-img card-img-top" alt="...">
+          <div class="card-body">
+            <a href="#" class="btn btn-outline-dark btn-md" style="margin-left: -4%;">Mid School</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 22rem;">
+          <img src="https://www.sparkadmissions.com/wp-content/uploads/2020/04/How_to_Get_Good_Grades_in_High_School.jpg" class="card-img2 card-img2-top" alt="...">
+          <div class="card-body">
+            <a href="#" class="btn btn-outline-dark">High School</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 22rem;">
+          <img src="https://edstrategy.org/wp-content/uploads/2021/05/Photos-13.png" class="card-img3 card-img3-top" alt="...">
+          <div class="card-body">
+            <a href="#" class="btn btn-outline-dark">Post Secondary School</a>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+    <section class="founder">
+ 
+      <div class="founder_description">
+        <h3>Our Founder</h3>
+        <br>
+        <p>The founder of our esteemed school is a visionary pioneer who dared to dream and transform that dream into a remarkable reality.
+              Their visionary leadership has created a nurturing and inclusive environment, where students are encouraged to explore their potential and excel in their chosen paths. 
+              The founder's legacy will forever remain an integral part of our school's identity and serve as a constant reminder of the transformative power of education.</p>
+        <p><strong>Late Dr P Sudhakar</strong>-Founder,Infinity Quest Academy</p>
+
+      </div>
+
+      <img id="myImg" src="https://media.istockphoto.com/id/1307385045/photo/close-up-of-indian-mature-men-stock-photo.jpg?s=612x612&w=0&k=20&c=ppyqkc3B8n1HMzHZ5a_GyykBwBHjdXy_3Kim_12L7cg=" alt="Founder"  height="" width="25%">
+      <div class="founder-img" style="position:absolute;left:67.5%;width:24.4%;height:33.7% ">
+        <h3>Our Founder</h3>
+        <h2>Infinity Quest Academy</h2>
+      </div>
+
+    </section>
+
+
+  <section class="slogans">
+    <div class="motto">
+       <center><H2>OUR MOTTO</H2></center>
+       <p><strong>LOVE LEARN LEAD</strong><br>
+           Motivated by the love of the Lord , Infinity Quest Academy seeks to educate children so that they may grow in knowledge and wisdom, 
+           live in humility and integrity, and serve God and mankind with joy and sincerity and Lead in the present day world.</p>
+    </div>
+    
+    <div class=" vision">
+       <center><H2>OUR VISION</H2></center>
+       <p><strong>Empowering learners, shaping leaders.</strong><br>
+           Empowering learners is our foundation, and shaping leaders is our vision. We are dedicated to equipping our students with the skills, 
+           values, and resilience needed to make a lasting impact in their lives and the world around them.</p>
+    </div>
+  </section>
+
+
+   <!-- <div class="quote"> 
+      <p><strong>Teach to transform, learn to lead </strong><br/>- APJ Abdul Kalam</p>
+   </div> -->
+  
+  
+      <div class="principal">
+
+        <img id="myImg1" src="https://www.apsbirpur.edu.in/upload/attach/370401571475533_pri.png" alt="Principal" height="" width="25%">
+
+        <div class="principle-img" style="position:absolute;left:15%;width:24%;height:32%">
+          <h3>Our Principal</h3>
+          <h2>Infinity Quest Academy</h2>
+        </div>
+          <div class="principal_description">
+          <h3>Our Principal</h3>
+          <p>Our esteemed  principal embodies the true essence of leadership, grace, and wisdom.
+              The lady principal's dedication to inclusivity and fostering a sense of belonging ensures that every student feels valued and supported. 
+              Under her guidance, the school flourishes as a beacon of knowledge, compassion, and empowerment.</p>
+          <p><strong>Dr S Bharathi</strong>-Principal,Infinity Quest Academy</p>
+            </div>
+      </div>
+
+ <h1 class="direct">Meet Our Directors</h1>
+
+  <div class="directors">
+      
+  <div class="card" style="width: 23rem;">
+      <img src="https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2017/11/16/Photos/Processed/IndiaSriLanka-kpmD--621x414@LiveMint.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mr Virat Kohli</h5>
+        <p class="card-text">Vice Principal</p>
+      </div>
+  </div>
+
+
+  <div class="card" style="width: 16rem;">
+      <img src="https://wikibio.in/wp-content/uploads/2019/04/Sakshi-Dhoni.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mrs Sakshi Singh Dhoni</h5>
+        <p class="card-text">Student Incharge</p>
+      </div>
+  </div>
+
+
+  <div class="card" style="width: 23rem;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc9cDTutg7oxSx7xmmxoDGb8qwl3-hubnlQnpwvRLLWo4aj8Rt2eYf8QDwcK-VinCbFWY&usqp=CAU" class="card-img-top" alt="..." style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Mr Mahendra Singh Dhoni</h5>
+        <p class="card-text">Dean</p>
+      </div>
+  </div>
+</div>
+
+  <section id="footer">
+    <div class="footer-info">
+      <div class="about-academy">
+      <h1>Infinity Quest Academy</h1>
+      <h4>Love Learn Lead</h4>
+      <p>we were successful to preserve and thrive the qualities of our heritage and to grow along with, serving educational qualities to the society.</p>
+      </div>
+      
+      <div class="links">
+      <div class="quick-links">
+        Quick Links:
+        <ul >
+          <li><a style="text-decoration: none; color:#fff" href="#aboutus">About Us</a></li>
+          <li><a style="text-decoration: none; color:#fff"  href="#admission2">Admission</a></li>
+          <li><a style="text-decoration: none; color:#fff"  href="index.html">Academics</a></li>
+          <li><a style="text-decoration: none; color:#fff"  href="index.html">Clubs</a></li>
+          <li><a style="text-decoration: none; color:#fff"  href="index.html">Home</a></li>
+        </ul>      
+      </div>
+
+      <div class="download-button">
+         Download Our App Now! <br>
+        <button type="button" class="btn btn-dark btn-md download-button"><i class="fa-brands fa-apple"></i>  Download</button>
+        <button type="button" class="btn btn-dark btn-md download-button"><i class="fa-brands fa-google-play"></i>  Download</button>
+      </div>
+      </div>
+      <h2 class="contact-information">Contact Information:</h2>
+      <div class="contact-us">
+    
+        <p>Infinity Quest Academy <br> Amritapuri, <br> Kerala, <br> Pin - 690525</p>
+        <div class="adress">
+        <p>1234500889 <br> 6688995522 <br></p>
+
+        <p>  Infinity@gmail.com <br> infinity_admission@gmail.com </p>
+      </div>
+      </div>
+    </div>
+    <center>
+    <div class="media">
+
+    <h2>Follow us on Social Media:</h2>
+      <ul>
+        <li><a href="#"><i class="footer-icon fa-brands fa-twitter"></i></a></li>
+        <li><a href="#"><i class="footer-icon fa-brands fa-facebook"></i></a></li>
+        <li><a href="#"><i class="footer-icon fa-brands fa-square-instagram"></i></a></li>
+        <li><a href="#"><i class="footer-icon fa-solid fa-envelope"></i></a></li>
+      </ul>
+
+    </div>
+    </center>
+
+    </section>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("form");
+        const searchInput = document.getElementById("search");
+        const errorMessage = document.getElementById("error-message");
+        const markInstance = new Mark(document.querySelectorAll("section, div"));
+      
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const searchTerm = searchInput.value.toLowerCase();
+      
+          markInstance.unmark();
+          markInstance.mark(searchTerm, {
+            separateWordSearch: false,
+            diacritics: false,
+            done: function (count) {
+              if (count > 0) {
+                errorMessage.style.display = "none";
+                scrollToFirstSearchResult();
+              } else {
+                errorMessage.style.display = "block";
+              }
+            },
+          });
+        });
+      
+        function scrollToFirstSearchResult() {
+          const firstHighlightedElement = document.querySelector("mark");
+          if (firstHighlightedElement) {
+            firstHighlightedElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
+      </script>
+      
+    
+
+    
+
+</body>
+</html>
