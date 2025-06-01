@@ -18,8 +18,7 @@ Infinity Quest Academy is a simple, responsive school web application designed u
 
 ## 🌐 Live Demo
 
-[Click here to view the live demo](https://manojk765.github.io/school-management-ui-app/)
-
+[Click here to view the live demo](https://manojk765.github.io/InfinityQuestAcademy_School-UI-App/)
 ## 👨‍💻 Author
 
 **Koneti Manoj**  
